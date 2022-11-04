@@ -15,3 +15,9 @@ public class NaturalNumberSum {
 		sc.close();
 	}
 }
+
+/*
+OUTPUT:
+Enter range : 25
+Sum of natural numbers from 1 to 25 is 325
+*/
