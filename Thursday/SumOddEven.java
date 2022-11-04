@@ -24,3 +24,11 @@ public class SumOddEven {
 		scan.close();
 	}
 }
+
+
+/*
+OUTPUT:
+Enter Range : 50
+Sum of even numbers from 1 to 50 : 650
+Sum of odd numbers from 1 to 50 : 625
+*/
