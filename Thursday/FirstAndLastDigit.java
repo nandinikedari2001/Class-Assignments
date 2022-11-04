@@ -24,3 +24,10 @@ public class FirstAndLastDigit {
 		
 	}
 }
+
+/*
+OUTPUT:
+Enter any number: 12345
+First Digit : 1
+Last Digit : 5
+*/
