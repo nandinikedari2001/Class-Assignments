@@ -2,7 +2,7 @@ package oopsconcept;
 
 interface LibraryUser
 {
-	//abstract classes
+	//abstract method
 	public void registerAccount();
 	public void requestBook();
 }
