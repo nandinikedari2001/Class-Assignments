@@ -1,0 +1,123 @@
+package oopsconcept;
+
+interface LibraryUser
+{
+	//abstract classes
+	public void registerAccount();
+	public void requestBook();
+}
+
+class KidUser implements LibraryUser
+{
+	int age;
+	String bookType;
+	
+	//setter methods
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
+	public void setBookType(String bookType) {
+		this.bookType = bookType;
+	}
+	
+	@Override
+	public void registerAccount()
+	{
+		if(this.age<=12)
+			System.out.println("You have successfully registered under a Kids Account");
+		if(this.age>12)
+			System.out.println("Sorry, Age must be less than 12 to register as a kid");
+	}
+	@Override
+	public void requestBook()
+	{
+		if(this.bookType.equalsIgnoreCase("kids"))
+			System.out.println("Book Issued successfully, please return the book within 10 days");
+		else
+			System.out.println("Oops, you are allowed to take only kids books");
+	}	
+}
+
+class AdultUser implements LibraryUser
+{
+	int age;
+	String bookType;
+	
+	//setter methods
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
+	public void setBookType(String bookType) {
+		this.bookType = bookType;
+	}
+	
+	@Override
+	public void registerAccount()
+	{
+		if(this.age>12)
+			System.out.println("You have successfully registered under an Adult Account”");
+		if(this.age<=12)
+			System.out.println("Sorry, Age must be greater than 12 to register as an adult");
+	}
+	@Override
+	public void requestBook()
+	{
+		if(this.bookType.equalsIgnoreCase("fiction"))
+			System.out.println("Book Issued successfully, please return the book within 7 days");
+		else
+			System.out.println("Oops, you are allowed to take only adult Fiction books");
+	}
+	
+}
+
+
+public class LibraryInterfaceDemo {
+
+	public static void main(String[] args) 
+	{
+		KidUser kid = new KidUser();
+		kid.setAge(10);
+		kid.setBookType("kids");
+		kid.registerAccount();
+		kid.requestBook();
+		System.out.println();
+		
+		kid.setAge(18);
+		kid.setBookType("fiction");
+		kid.registerAccount();
+		kid.requestBook();
+		System.out.println();
+		
+		AdultUser adult = new AdultUser();
+		adult.setAge(5);
+		adult.setBookType("kids");
+		adult.registerAccount();
+		adult.requestBook();
+		System.out.println();
+		
+		adult.setAge(23);
+		adult.setBookType("fiction");
+		adult.registerAccount();
+		adult.requestBook();
+
+	}
+
+}
+
+/*
+OUTPUT:
+You have successfully registered under a Kids Account
+Book Issued successfully, please return the book within 10 days
+
+Sorry, Age must be less than 12 to register as a kid
+Oops, you are allowed to take only kids books
+
+Sorry, Age must be greater than 12 to register as an adult
+Oops, you are allowed to take only adult Fiction books
+
+You have successfully registered under an Adult Account”
+Book Issued successfully, please return the book within 7 days
+ 
+*/
