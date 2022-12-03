@@ -42,3 +42,16 @@ public class CopyElements
 	}
 
 }
+
+/*
+ OUTPUT:
+Enter no. of elements in array: 5
+Enter 5 elements in the array:
+3
+2
+1
+4
+5
+After copying elements from arr1 to arr2, arr2 will be : 
+3 2 1 4 5 
+*/
