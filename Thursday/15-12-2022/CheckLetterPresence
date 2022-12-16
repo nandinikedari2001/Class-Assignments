@@ -1,0 +1,34 @@
+//write a program to check if the letter 'e' is present in the word 'mumbai' or not.
+
+package stringexamples;
+
+public class CheckLetterPresence 
+{
+
+	public static void main(String[] args) 
+	{
+		String str = "mumbai";
+		int i;
+		char ch = 'e';
+		boolean f=false;
+		
+		for(i=0;i<str.length();i++)
+		{
+			if(ch==str.charAt(i))
+			{
+				f = true;
+				break;
+			}
+		}
+		
+		if(f==true)
+			System.out.println("'"+ch+"' is present in the word '"+str+"'");
+		else
+			System.out.println("'"+ch+"' is not present in the word '"+str+"'");
+	}
+}
+
+/*
+ OUTPUT:
+ 'e' is not present in the word 'mumbai'
+*/
