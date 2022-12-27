@@ -1,0 +1,39 @@
+//Find out the sum of all digits from an alpha numeric string.
+//hello123
+
+package stringexamples;
+
+import java.util.Scanner; 
+
+public class AlphaNumericStringSum 
+{
+
+	public static void main(String[] args) 
+	{
+		char ch;
+		int sum=0;
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("Enter A String to find alphanumeric Sum: ");
+		String str = sc.nextLine();
+		
+		for(int i=0;i<str.length();i++)
+		{
+			ch = str.charAt(i);
+			if(ch>=48 && ch<=57)
+			{
+				int n = Integer.parseInt(String.valueOf(ch));
+				sum = sum + n;
+			}
+		}
+		System.out.println("Sum of digits of alpha numeric string '"+str+"' is "+sum);
+	
+		sc.close();
+	}
+}
+
+/*
+ OUTPUT:
+Enter A String to find alphanumeric Sum: hello123
+Sum of digits of alpha numeric string 'hello123' is 6
+ */
